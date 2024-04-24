@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react'
 import styled from 'styled-components'
 import Product from './Product'
@@ -29,36 +28,4 @@ const Wrapper = styled.section`
   }
 `
 
-=======
-import React from 'react'
-import styled from 'styled-components'
-import Product from './Product'
-
-const GridView = () => {
-  return <h4>Grid View</h4>
-}
-
-const Wrapper = styled.section`
-  img {
-    height: 175px;
-  }
-
-  .products-container {
-    display: grid;
-    gap: 2rem 1.5rem;
-  }
-
-  @media (min-width: 992px) {
-    .products-container {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-  @media (min-width: 1170px) {
-    .products-container {
-      grid-template-columns: repeat(3, 1fr);
-    }
-  }
-`
-
->>>>>>> 2db3691459c20528a15b6fc5bc272a1aaa9c1438
 export default GridView
