@@ -9,6 +9,8 @@ import { CartProvider } from './context/cart_context';
 import { UserProvider } from './context/user_context';
 import { Auth0Provider } from '@auth0/auth0-react';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
 
-root.render(<App />);
+ReactDOM.render(<App/>, document.getElementById('root'))
+//const root = ReactDOM.createRoot(document.getElementById('root'));
+
+//root.render(<App />);
