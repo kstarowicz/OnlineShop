@@ -1,6 +1,7 @@
 import React from 'react'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import {Navbar, Sidebar, Footer } from './components'
+
 import styled from 'styled-components'
 
 const Button = styled.button`
@@ -10,13 +11,20 @@ color: white;
 
 const Container = styled.div`
 background: red;
+columns: white;
+font-size: 2rem;
 `
 
 function App() {
-  return <div>
+  return (
+  <div>
     <h4>comfy sloth starter</h4>
     <Button>click me</Button>
+    <Container>
+      
+    </Container>
   </div>
+  )
 }
 
 export default App

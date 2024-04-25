@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+import ReactDOM from 'react-dom';//spr czy działa bez client możliwy błąd bez '/client'
 import './index.css';
 import App from './App';
 
@@ -10,7 +10,7 @@ import { UserProvider } from './context/user_context';
 import { Auth0Provider } from '@auth0/auth0-react';
 
 
-ReactDOM.render(<App/>, document.getElementById('root'))
+ReactDOM.render(<App />, document.getElementById('root'))
 //const root = ReactDOM.createRoot(document.getElementById('root'));
 
 //root.render(<App />);
