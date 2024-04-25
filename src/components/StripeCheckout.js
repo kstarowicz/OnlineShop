@@ -165,4 +165,4 @@ const Wrapper = styled.section`
   }
 `
 
-export default StripeCheckout
+export default StripeCheckout;
