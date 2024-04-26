@@ -2,27 +2,14 @@ import React from 'react'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import {Navbar, Sidebar, Footer } from './components'
 
-import styled from 'styled-components'
+//import styled from 'styled-components'
 
-const Button = styled.button`
-background: green;
-color: white;
-`
-
-const Container = styled.div`
-background: red;
-columns: white;
-font-size: 2rem;
-`
+import Testing from './Testing'
 
 function App() {
   return (
   <div>
     <h4>comfy sloth starter</h4>
-    <Button>click me</Button>
-    <Container>
-      
-    </Container>
   </div>
   )
 }
