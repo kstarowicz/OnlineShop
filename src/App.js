@@ -4,7 +4,6 @@ import {Navbar, Sidebar, Footer } from './components'
 
 //import styled from 'styled-components'
 
-import Testing from './Testing'
 
 function App() {
   return (
