@@ -10,7 +10,12 @@ import { UserProvider } from './context/user_context';
 import { Auth0Provider } from '@auth0/auth0-react';
 
 
-ReactDOM.render(<App />, document.getElementById('root'))
-//const root = ReactDOM.createRoot(document.getElementById('root'));
+ReactDOM.render(
+  <ProductsProvider>
+    <App />
+  </ProductsProvider>, 
+  document.getElementById('root')
+)
 
+//const root = ReactDOM.createRoot(document.getElementById('root'));
 //root.render(<App />);
