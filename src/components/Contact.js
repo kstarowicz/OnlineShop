@@ -12,11 +12,20 @@ const Contact = () => {
         Maecenas at vestibulum arcu. 
         Nunc nunc ipsum, facilisis sed risus eu, ultricies.
         </p>
-        <form className='contact-form'>
-          <input type='email'
+        <form 
+          className='contact-form'
+          action='https://formspree.io/f/mpzvbkwp'
+          method='POST'
+          
+        >
+
+          <input 
+          type='email'
           className='form-input'
           placeholder='enter email'
+          name='_replyto'
           />
+          
           <button type='submit' className='submit-btn'>
             subscribe
           </button>
@@ -26,6 +35,8 @@ const Contact = () => {
   </Wrapper>
   )
 }
+
+//https://formspree.io/ rozwiązanie formularza dodanie email oraz hasła opis itp 
 const Wrapper = styled.section`
   padding: 5rem 0;
   h3 {
