@@ -17,7 +17,7 @@ import {
     if (action.type === SIDEBAR_CLOSE) {
       return {...state, isSidebarOpen: false }
      }
-     if (action.type === GET_SINGLE_PRODUCT_BEGIN) {
+     if (action.type === GET_PRODUCTS_BEGIN) {
       return {...state, products_loading: true}
      }
      if(action.type === GET_PRODUCTS_SUCCESS) {
@@ -31,12 +31,11 @@ import {
       featured_products
       }
      }
-     if(action.type === GET_PRODUCTS_ERROR){
+     if(action.type === GET_PRODUCTS_ERROR) {
       return {
         ...state,
         products_loading:false,
-        products_error:true
-      }
+        products_error:true}
      }
 
     throw new Error(`No Matching "${action.type}" - action type`)
