@@ -50,7 +50,7 @@ import {
       return {
         ...state,
         single_product_loading:false,
-        single_product:action.payload
+        single_product:action.payload,
       }
      }
 

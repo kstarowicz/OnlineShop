@@ -18,10 +18,10 @@ const SingleProductPage = () => {
   const {id} = useParams();
   const history =useHistory()
   const {
-    single_product_loading:loading, 
-    single_product_error:error, 
-    single_product:product,
-    fetchSingleProduct
+    single_product_loading: loading, 
+    single_product_error: error, 
+    single_product: product,
+    fetchSingleProduct,
   } = useProductsContext()
 
   useEffect(() => {

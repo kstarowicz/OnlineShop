@@ -11,7 +11,8 @@ import { useUserContext } from '../context/user_context'
 const Nav = () => {
   const {openSidebar} = useProductsContext()
    return (
-  <NavContainer><div className='nav-center'>
+  <NavContainer>
+    <div className='nav-center'>
     <div className='nav-header'>
       <Link to='/'>
         <img src={logo} alt='comfy sloth'/>
@@ -21,8 +22,8 @@ const Nav = () => {
       </button>
     </div>
     <ul className='nav-links'>
-      {links.map((link)=>{
-        const { id,text,url } = link
+      {links.map((link) => {
+        const { id, text, url } = link
         return (
         <li key={id}>
         <Link to={url}>{text}</Link>
