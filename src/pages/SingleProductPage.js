@@ -54,9 +54,39 @@ const SingleProductPage = () => {
     images,
   } = product
 
-  return <Wrapper>
-    <PageHero title={name} />
+  return (
+  <Wrapper>
+    <PageHero title={name} product/>
+    <div className='section section-center page'>
+      <Link to='/products' className='btn'>
+        back to product 
+      </Link>
+      <div className='product-center'>
+        <ProductImages/>
+        <section className='content'>
+          <h2>{name}</h2>
+          <Stars/>
+          <h5 className='price'>{formatPrice(price)}</h5>
+          <p className='desc'>  {description}</p>
+          <p className='info'>
+            <span>Available :</span>
+            {stock > 0 ? 'In stock':'out of stock'}
+          </p>
+
+          <p className='info'>
+            <span>Available :</span>
+            {stock > 0 ? 'In stock':'out of stock'}
+          </p>
+          
+          <p className='info'>
+            <span>Available :</span>
+            {stock > 0 ? 'In stock':'out of stock'}
+          </p>
+        </section>
+      </div>
+    </div>
   </Wrapper>
+  )
 }
 
 const Wrapper = styled.main`
