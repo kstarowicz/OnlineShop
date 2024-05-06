@@ -35,14 +35,28 @@ const SingleProductPage = () => {
       },3000)
     }
   }, [error])  //error pojawi się po 3 sekundach
+  
   if (loading) {
     return <Loading />
   }
   if (error) {
     return <Error/>
   }
+  const {
+    name,
+    price,
+    description,
+    stock,
+    stars,
+    reviews,
+    id:sku,
+    company,
+    images,
+  } = product
 
-  return <h4>single product page</h4>
+  return <Wrapper>
+    <PageHero title={name} />
+  </Wrapper>
 }
 
 const Wrapper = styled.main`
