@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';//spr czy działa bez client możliwy błąd bez '/client'
+import { createRoot } from 'react-dom/client';//spr czy działa bez client możliwy błąd bez '/client'
 import './index.css';
 import App from './App';
 
@@ -10,12 +10,13 @@ import { UserProvider } from './context/user_context';
 import { Auth0Provider } from '@auth0/auth0-react';
 
 
-ReactDOM.render(
+const container = document.getElementById('root'); // Pobierz element DOM
+const root = createRoot(container); // Utwórz root przy użyciu createRoot nowy sposób od 18 
+root.render(
   <ProductsProvider>
     <App />
-  </ProductsProvider>, 
-  document.getElementById('root')
-)
+  </ProductsProvider>
+);
 
 //const root = ReactDOM.createRoot(document.getElementById('root'));
 //root.render(<App />);
