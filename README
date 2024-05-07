@@ -5,3 +5,6 @@ JS
 React 
 
 //https://formspree.io/ rozwiązanie formularza dodanie email oraz hasła opis itp 
+
+Wtyczka CORS CORS Unblock
+0.3.8 lub nowsza inaczej przy odpaleniu localhost 3000 będzie błąd 

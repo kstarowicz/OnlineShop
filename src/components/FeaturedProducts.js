@@ -11,7 +11,8 @@ const FeaturedProducts = () => {
     products_loading: loading,
     products_error: error,
     featured_products: featured,
-} = useProductsContext()
+} = useProductsContext();
+
   if (loading) {
     return <Loading/>
     }
