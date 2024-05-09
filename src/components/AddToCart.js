@@ -7,7 +7,24 @@ import AmountButtons from './AmountButtons'
 
 const AddToCart = ({product}) => {
   const {id,stock,colors} = product
-  return <h4>addToCart </h4>
+  const [mainColor,SetMainColor] = useState(colors[0]);
+
+
+
+  return (
+  <Wrapper>
+    <div className='colors'>
+      <span>
+        <div>{
+          colors.map((color,index) => {
+            return <button key={index}>{index}</button>
+          })
+        }</div>
+      </span>
+    </div>
+    <div className='btn-container'></div>
+     </Wrapper>
+)
 }
 
 const Wrapper = styled.section`
