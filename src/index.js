@@ -14,7 +14,10 @@ const container = document.getElementById('root'); // Pobierz element DOM
 const root = createRoot(container); // Utwórz root przy użyciu createRoot nowy sposób od 18 
 root.render(
   <ProductsProvider>
-    <App />
+    <FilterProvider>
+      <App />
+    </FilterProvider>
+    
   </ProductsProvider>
 );
 
