@@ -15,7 +15,8 @@ import { useProductsContext } from './products_context'
 
 const initialState = {
   filtered_products:[],
-  all_products:[]
+  all_products:[],
+  grid_view: true,
 }
 
 const FilterContext = React.createContext()
@@ -26,7 +27,7 @@ export const FilterProvider = ({ children }) => {
 
 
   useEffect(() =>{
-    dispatch({type:LOAD_PRODUCTS, payload: products })
+    dispatch({type: LOAD_PRODUCTS, payload: products })
 
   }, [products])
 
