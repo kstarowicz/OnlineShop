@@ -2,8 +2,18 @@ import React from 'react'
 import { useFilterContext } from '../context/filter_context'
 import { BsFillGridFill, BsList } from 'react-icons/bs'
 import styled from 'styled-components'
+
+
+
 const Sort = () => {
-  return <h4>sort </h4>
+  const {filtered_products:products,grid_view} =useFilterContext()
+  return (
+  <Wrapper>
+    <div className='btn-container'>
+
+    </div>
+  </Wrapper>
+)
 }
 
 const Wrapper = styled.section`
@@ -51,8 +61,7 @@ const Wrapper = styled.section`
         font-size: 1rem;
       }
     }
-    .active {
-      background: var(--clr-black);
+    .active {background: var(--clr-black);
       color: var(--clr-white);
     }
   }
