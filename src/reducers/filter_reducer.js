@@ -57,11 +57,11 @@ import {
         tempProducts = tempProducts.sort((a,b) => {
           return b.name.localeCompare(a.name)
       })
-    
+      }
       return {...state, filtered_products:tempProducts }
+      
     }
-  
     throw new Error(`No Matching "${action.type}" - action type`)
-  }
+  
 }
   export default filter_reducer
