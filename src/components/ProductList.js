@@ -8,7 +8,6 @@ const ProductList = () => {
   useFilterContext()
   if(products.length < 1){
     return (
-
     <h5 style= {{textTransform: 'none' }}>     
         Sorry, no products matched your search...
     </h5>
