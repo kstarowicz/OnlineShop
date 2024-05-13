@@ -29,12 +29,27 @@ import {
     
     if(action.type === SORT_PRODUCTS){
       const {sort,filtered_products} = state;
-      let tempProducts = [];
+      let tempProducts = [...filtered_products]
+
       if(sort === 'price-lowest'){
+        tempProducts = tempProducts.sort((a,b) => {
+
+        })
+      }
+
+      if(sort === 'price-highest'){
         
       }
 
-      return {...state }
+      if(sort === 'name-a'){
+        
+      }
+
+      if(sort === 'name-z'){
+        
+      }
+
+      return {...state, filtered_products:tempProducts }
     }
     throw new Error(`No Matching "${action.type}" - action type`)
   }
