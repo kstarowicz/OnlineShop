@@ -60,28 +60,32 @@ export const FilterProvider = ({ children }) => {
   const updateSort = (e) => {
     //const name = e.target.name
     const value = e.target.value 
-    dispatch({ type:UPDATE_SORT, payload: value})
+    dispatch({ type: UPDATE_SORT, payload: value})
   }
 
   const updateFilters = (e) => {
     let name = e.target.name
-    let value = e.target.value;
-    dispatch({type:UPDATE_FILTERS,payload:{name,value}})
+    let value = e.target.value
+    if(name === 'category') {
+      value =e.target.useContext
+    }
+    dispatch({type: UPDATE_FILTERS, payload: { name, value } })
   }
 
   const clearFilters = () => {
-
   }
-
   return (
-    <FilterContext.Provider value={{
+    <FilterContext.Provider 
+    value={{
       ...state, 
       setGridView, 
       setListView, 
       updateSort, 
       updateFilters, 
-      clearFilters, }}>
-      {children}
+      clearFilters, 
+      }}
+      >
+     {children}
     </FilterContext.Provider>
   )
 }

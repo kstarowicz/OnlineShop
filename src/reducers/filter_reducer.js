@@ -37,12 +37,12 @@ import {
       const {sort,filtered_products} = state
       let tempProducts = [...filtered_products]
     
-      if(sort === 'price-lowest') {
+      if (sort === 'price-lowest') {
         tempProducts = tempProducts.sort((a,b) => {
           if(a.price < b.price) {
             return -1
           }
-          if(a.price > b.price){
+          if(a.price > b.price) {
             return 1
           }
           return 0
