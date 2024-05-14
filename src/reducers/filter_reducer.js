@@ -16,7 +16,7 @@ import {
       
       return {
         ...state,        
-        all_products:[...action.payload],
+        all_products: [...action.payload],
         filtered_products: [...action.payload],
         filters:{...state.filters,max_price: maxPrice, price:
           maxPrice},
@@ -72,8 +72,16 @@ import {
       return {...state, filters: {...state.filters, [name] :value} }
     }
 
-    if(action.type === FILTER_PRODUCTS){
-      return {...state}
+    if (action.type === FILTER_PRODUCTS){
+      const {all_products} = state
+      const {text,category,company,color,price,shipping} = state.filters
+
+      let tempProducts = [...all_products]
+
+      if(text) {
+        tempProducts = tempProducts
+      }
+      return {...state, filtered_products: tempProducts }
     }
     if (action.type === CLEAR_FILTERS){
       return{
@@ -84,9 +92,7 @@ import {
           company:'all',
           category:'all',
           color:'all',
-          min_price:0,
-          max_price:0,
-          price:state.filters.max_price,
+          price: state.filters.max_price,
           shipping:false,      
         },
       }
