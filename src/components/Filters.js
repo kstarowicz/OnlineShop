@@ -146,7 +146,7 @@ const Filters = () => {
          {/*end of price*/}
          {/*shipping*/}
          <div className='form-control shippin'>
-          <label htmlFor='shipping'> free shipping</label>
+          <label htmlFor='shipping'> Free Shipping</label>
           <input 
           type='checkbox' 
           name='shipping' 
