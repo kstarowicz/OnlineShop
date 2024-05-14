@@ -74,12 +74,16 @@ import {
 
     if (action.type === FILTER_PRODUCTS){
       const {all_products} = state
-      const {text,category,company,color,price,shipping} = state.filters
+      const {text, category, company, color, price, shipping} = state.filters
 
       let tempProducts = [...all_products]
 
       if(text) {
-        tempProducts = tempProducts
+        tempProducts = tempProducts.filter((product) => {
+          return (
+            product.name.toLowerCase().startsWith(text)
+          )
+        })
       }
       return {...state, filtered_products: tempProducts }
     }
