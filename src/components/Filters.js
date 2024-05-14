@@ -77,7 +77,7 @@ const Filters = () => {
           >
             {companies.map((c, index) => {
               return (
-                <option key={index} value={c}></option>
+                <option key={index} value={c}>{c}</option>
               )
             })}
           </select>
@@ -143,9 +143,27 @@ const Filters = () => {
           value={price}
           />
         </div>
-
          {/*end of price*/}
+         {/*shipping*/}
+         <div className='form-control shippin'>
+          <label htmlFor='shipping'> free shipping</label>
+          <input 
+          type='checkbox' 
+          name='shipping' 
+          id='shipping'
+          onChange={updateFilters} 
+          checked={shipping}
+          />
+         </div>
+         {/*end of shipping*/}
       </form>
+      <button 
+      type='button' 
+      className='clear-btn' 
+      onClick={clearFilters}>
+        {''}
+        clear filters
+      </button>
     </div>
   </Wrapper>
 )

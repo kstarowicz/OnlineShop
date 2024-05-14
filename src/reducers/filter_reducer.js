@@ -59,7 +59,7 @@ import {
         })
       }
 
-      if(sort === 'name-z'){
+      if (sort === 'name-z'){
         tempProducts = tempProducts.sort((a,b) => {
           return b.name.localeCompare(a.name)
       })
@@ -67,13 +67,29 @@ import {
       return {...state, filtered_products:tempProducts }
       
     }
-    if(action.type === UPDATE_FILTERS){
-      const {name,value} = action.payload
-      return {...state,filters:{...state.filters,[name]:value}}
+    if (action.type === UPDATE_FILTERS) {
+      const { name, value } = action.payload
+      return {...state, filters: {...state.filters, [name] :value} }
     }
 
     if(action.type === FILTER_PRODUCTS){
-      return {...state};
+      return {...state}
+    }
+    if (action.type === CLEAR_FILTERS){
+      return{
+        ...state,
+        filters:{
+          ...state.filters,
+          text:'',
+          company:'all',
+          category:'all',
+          color:'all',
+          min_price:0,
+          max_price:0,
+          price:state.filters.max_price,
+          shipping:false,      
+        },
+      }
     }
 
     throw new Error(`No Matching "${action.type}" - action type`)
