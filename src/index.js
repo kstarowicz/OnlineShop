@@ -15,7 +15,9 @@ const root = createRoot(container); // Utwórz root przy użyciu createRoot nowy
 root.render(
   <ProductsProvider>
     <FilterProvider>
+      <CartProvider>
       <App />
+      </CartProvider>
     </FilterProvider>
     
   </ProductsProvider>
