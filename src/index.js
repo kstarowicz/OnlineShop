@@ -23,7 +23,8 @@ root.render(
     authorizationParams={{
       redirect_uri: window.location.origin
     }}
-  >
+    >
+    <UserProvider>
   <ProductsProvider>
     <FilterProvider>
       <CartProvider>
@@ -32,6 +33,7 @@ root.render(
     </FilterProvider>
     
   </ProductsProvider>
+  </UserProvider>
   </Auth0Provider>
 );
 

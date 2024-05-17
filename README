@@ -14,4 +14,10 @@ uwierzytelnienie
 
 dodanie authO
 npm install @auth0/auth0-react
- 
+// {
+//     "sub": "auth0|6647b1c7fcacdcaa7fdfa6e7",
+//     "nickname": "kastarowicz",
+//     "name": "kastarowicz@gmail.com",
+//     "picture": "https://s.gravatar.com/avatar/736c55db5a9c533e56cd249cc32fc0dc?s=480&r=pg&d=https%3A%2F%2Fcdn.auth0.com%2Favatars%2Fka.png",
+//     "updated_at": "2024-05-17T19:36:39.648Z"
+//   }
