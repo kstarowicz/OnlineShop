@@ -49,14 +49,14 @@ import CartItem from '../components/CartItem';
    if(action.typ === CLEAR_CART) {
     return {...state,cart: []}
    }
-   if(action.type === TOGGLE_CART_ITEM_AMOUNT){
+   if(action.type === TOGGLE_CART_ITEM_AMOUNT) {
     const {id, value} = action.payload
-    const tempCart = state.cart.map((item)=>{
+    const tempCart = state.cart.map((item) => {
       if(item.id === id){
-        if(value === 'ince'){
+        if(value === 'inc') {
           let newAmount = item.amount + 1
           if(newAmount > item.max){
-            newAmount = item.max
+            newAmount = item.max 
           }
           return {...item, amount: newAmount }
         }

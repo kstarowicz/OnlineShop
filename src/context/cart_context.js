@@ -7,6 +7,7 @@ import {
   CLEAR_CART,
   COUNT_CART_TOTALS,
 } from '../actions'
+import { type } from '@testing-library/user-event/dist/type';
 
 
 const getLocalStorage = () => {
@@ -41,7 +42,7 @@ export const CartProvider = ({ children }) => {
   const removeItem = (id)=> {
     dispatch({ type: REMOVE_CART_ITEM, payload: id })
   }
-  
+
   const toggleAmount = (id,value)=> {
     dispatch({ type: TOGGLE_CART_ITEM_AMOUNT,payload:{id, value} })
   }
@@ -51,9 +52,10 @@ export const CartProvider = ({ children }) => {
   }
 
   useEffect(() => {
-
+    dispatch({type: COUNT_CART_TOTALS })
     localStorage.setItem('cart',JSON.stringify(state.cart))
   }, [state.cart])
+
   return (
     <CartContext.Provider value={{...state, addToCart, removeItem, toggleAmount, clearCart}}>
       {children}
