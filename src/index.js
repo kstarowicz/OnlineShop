@@ -15,13 +15,13 @@ const container = document.getElementById('root'); // Pobierz element DOM
 
 
 
-const root = createRoot(container); // Utwórz root przy użyciu createRoot nowy sposób od 18 
+const root = createRoot(container); // Utwórz root przy użyciu createRoot  od 18 
 root.render(
   <Auth0Provider
     domain="dev-lbn8zxj2ypy0m2ji.us.auth0.com"
     clientId="nAQ2v28A4ikg4ihXPbdl9pcNIdS6sd39"
     authorizationParams={{
-      redirect_uri: window.location.origin
+   redirect_uri: window.location.origin
     }}
     >
     <UserProvider>
