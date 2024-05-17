@@ -38,12 +38,14 @@ export const CartProvider = ({ children }) => {
       amount, product } })
   }
 
-  const removeItem = (id)=> {}
-
-
+  const removeItem = (id)=> {
+    dispatch({type:REMOVE_CART_ITEM,payload:id})
+  }
   const toggleAmount = (id,value)=> {}
 
-  const clearCart = ()=> {}
+  const clearCart = ()=> {
+    dispatch({type:CLEAR_CART})
+  }
 
   useEffect(() => {
 
