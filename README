@@ -9,3 +9,9 @@ React
 Wtyczka CORS CORS Unblock
 0.3.8 lub nowsza inaczej przy odpaleniu localhost 3000 będzie błąd 
 
+https://auth0.com/
+uwierzytelnienie 
+
+dodanie authO
+npm install @auth0/auth0-react
+ 
