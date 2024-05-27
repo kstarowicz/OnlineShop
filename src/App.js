@@ -11,6 +11,7 @@ import {
   About,
   Products,
   PrivateRoute,
+  AuthWrapper,
 } from './pages'
 
 
@@ -20,6 +21,7 @@ import {
 
 function App() {
   return (
+    <AuthWrapper>
   <Router>
     <Navbar/>
     <Sidebar/>
@@ -47,6 +49,7 @@ function App() {
     </Switch>
     <Footer/>
   </Router>
+  </AuthWrapper>
   )
 }
 
