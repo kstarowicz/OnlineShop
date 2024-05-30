@@ -15,6 +15,11 @@ uwierzytelnienie
 dodanie authO
 Potrzebne do logowania i sprawdzanai
 npm install @auth0/auth0-react
+
+netlify accounts- do budowy i zarządzania nowoczesnymi aplikacjami 
+
+
+Sttripe - do płacenia i subskrybcji 
 // {
 //     "sub": "auth0|6647b1c7fcacdcaa7fdfa6e7",
 //     "nickname": "kastarowicz",
