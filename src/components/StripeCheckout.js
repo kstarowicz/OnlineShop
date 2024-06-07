@@ -20,6 +20,15 @@ const CheckoutForm = () => {
   const {myUser} = useUserContext();
   const history = useHistory();
 
+  const [succeeded,setSucceeeded] = useState(false)
+  const [error,setError] = useState(null)
+  const [processing,setProcessing] = useState('')
+  const [disabled, setDisabled] = useState(true)
+  const [clientSecret,setClientSecret] = useState('')
+  const stripe = useStripe()
+  const elements = useElements()
+
+
 
   const cardStyle = {
     style: {
