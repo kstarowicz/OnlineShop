@@ -48,6 +48,18 @@ const CheckoutForm = () => {
     },
   }
 
+
+  const createPaymentIntent = async() => {
+
+  }
+
+  useEffect( ()=> {
+    createPaymentIntent()
+  }, [])
+
+  const handleChange = async (event) => {}
+  const handleSubmit = async (ev) => {}
+
   return <h2>hello from Stripe Checkout </h2>
 }
 
